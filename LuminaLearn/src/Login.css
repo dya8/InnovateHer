@@ -21,7 +21,7 @@
 
 .login-form {
   flex: 1;
-  background: white;
+  background:white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -59,4 +59,65 @@ button {
 
 button:hover {
   background-color: #21a1f1;
+}
+
+.Quiz
+{
+  
+  
+    display:flex;
+    flex-wrap: wrap;
+
+   align-content:start;
+  
+   margin-right:-20px;
+  
+}
+.one {
+  
+  width:400px;
+  
+  overflow:hidden;
+  margin:20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  
+}
+.one:hover
+{
+  border-color: aqua; /* Change to your desired hover color */
+    transform: scale(1.2);
+}
+.two{
+  
+  width:400px;
+  
+  overflow:hidden;
+  margin:20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  
+}
+.two:hover
+{
+  border-color: aqua; /* Change to your desired hover color */
+    transform: scale(1.2);
+}
+.three{
+  
+  width:400px;
+  
+  overflow:hidden;
+  margin:20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  
+}
+.three:hover
+{
+  border-color: aqua; /* Change to your desired hover color */
+    transform: scale(1.2);
 }
