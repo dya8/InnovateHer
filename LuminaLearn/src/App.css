@@ -1,6 +1,6 @@
 body
 {
- background-color:brown;
+ background-color:#a52a2a;
  
   
  }
@@ -54,3 +54,27 @@ button:hover {
   background-color: #21a1f1;
 }
 
+button {
+  margin: 5px;
+}
+
+.instructions {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 50%;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.instructions h1 {
+  text-align: center;
+}
+
+.instructions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.instructions li {
+  margin: 10px 0;
+}

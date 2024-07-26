@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Register.css';
-import registerImage from './assets/loginImage.png'; // Use an appropriate image
+import registerImage from './assets/loginImage.png';
 
 function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [contact, setContact] = useState('');
+  const [age, setAge] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
+  const [profession, setProfession] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,9 +20,15 @@ function Register() {
       const response = await axios.post('http://localhost:5000/api/register', {
         username,
         password,
+        contact: parseInt(contact, 10), // Ensure contact is sent as an integer
+        age: parseInt(age, 10),         // Ensure age is sent as an integer
+        city,
+        state,
+        profession,
       });
       if (response.data.success) {
         alert('Registration successful');
+        navigate('/home');
       } else {
         alert('Registration failed');
       }
@@ -48,6 +61,51 @@ function Register() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            Contact:
+            <input
+              type="number"
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            Age:
+            <input
+              type="number"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            City:
+            <input
+              type="text"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            State:
+            <input
+              type="text"
+              value={state}
+              onChange={(e) => setState(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            Profession:
+            <input
+              type="text"
+              value={profession}
+              onChange={(e) => setProfession(e.target.value)}
               required
             />
           </label>
