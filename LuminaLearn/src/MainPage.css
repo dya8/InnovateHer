@@ -1,0 +1,126 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: url('./assets/background.jpg') no-repeat center center fixed; /* Optional: background image */
+    background-size: cover;
+  }
+  
+  .main-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+   /* background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Box shadow */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border for glass effect */
+    backdrop-filter: blur(10px); /* Blur effect */
+  }
+  
+  .main-header, .menu-section, .hero-section {
+    padding: 20px;
+    background: hwb(0 93% 5% / 0.897); /* Slightly more opaque for readability */
+    border-radius: 10px;
+    max-width:220vw;
+  }
+  
+  .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #00b5ad;
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:20px;
+    margin-top:20px;
+  }
+  
+  .points {
+    margin-right: 20px;
+    font-size: 1em;
+    color:#007bff;
+
+  }
+  
+  
+  .profile-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .profile-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom:20px;
+    margin-top:20px;
+    
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text p {
+    font-size: 1.2em;
+  }
+  
+  .menu-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: hwb(0 93% 5% / 0.897);  /* More opaque background */
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .menu-button {
+    background-color: #00b5ad;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-button:hover {
+    background-color: #008b7a;
+  }
+  

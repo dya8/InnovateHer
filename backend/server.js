@@ -1,3 +1,4 @@
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -13,8 +14,7 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://diyadileep0806:SIJIdileep03@cluster1.pfazmqu.mongodb.net/mydb', {
-  // useNewUrlParser: true,
-  // useUnifiedTopology: true,
+
 })
   .then(() => {
     console.log('Connected to MongoDB');
@@ -27,7 +27,12 @@ mongoose.connect('mongodb+srv://diyadileep0806:SIJIdileep03@cluster1.pfazmqu.mon
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true },
   password: { type: String, required: true },
-  age: { type: Number, required: true }, // Change type to Number
+  age: { type: Number, required: true },
+  contact: { type: Number, required: true },
+  name: { type: String, required: true },
+  city: { type: String, required: true },
+  state: { type: String, required: true },
+  profession: { type: String, required: true },
 });
 
 const User = mongoose.model('User', userSchema);
@@ -41,14 +46,14 @@ app.get('/getUsers', (req, res) => {
 
 // Registration Endpoint
 app.post('/api/register', async (req, res) => {
-  const { username, password, age } = req.body;
+  const { username, password, age, contact, name, city, state, profession } = req.body;
   try {
     if (!Number.isInteger(age)) {
       return res.status(400).json({ success: false, message: 'Age must be an integer' });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = new User({ username, password: hashedPassword, age });
+    const newUser = new User({ username, password: hashedPassword, age, contact, name, city, state, profession });
     await newUser.save();
     res.json({ success: true });
   } catch (error) {

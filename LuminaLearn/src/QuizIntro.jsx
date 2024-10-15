@@ -10,8 +10,23 @@ import Button from '@mui/material/Button';
 import { CardActionArea } from '@mui/material';
 import '../src/Login.css';
 
+
 export  default function QuizIntro() 
 {
+  const navigate = useNavigate(); // Use the useNavigate hook for navigation
+
+  const getclick = () => {
+    // You can pass state or parameters here if needed
+    navigate("/quiz"); // Navigate to the profile page
+  };
+  const getclick1 = () => {
+    // You can pass state or parameters here if needed
+    navigate("/quiz"); // Navigate to the profile page
+  };
+  const getclick2= () => {
+    // You can pass state or parameters here if needed
+    navigate("/quiz"); // Navigate to the profile page
+  };
    
      return(
         <>
@@ -25,16 +40,15 @@ export  default function QuizIntro()
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Agriculture Quiz
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        
+        <Button size="small" onClick={getclick}>Play</Button>
       </CardActions>
     </Card>
     </div>
@@ -47,16 +61,15 @@ export  default function QuizIntro()
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+      
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+         CyberQuiz
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+       
+        <Button size="small"onClick={getclick1}>Play</Button>
       </CardActions>
     </Card>
     </div>
@@ -69,16 +82,15 @@ export  default function QuizIntro()
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+       
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Urban Policy Quiz
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        
+        <Button size="small"onClick={getclick2}>Play</Button>
       </CardActions>
     </Card>
 </div>

@@ -1,0 +1,88 @@
+/* Game.css */
+
+/* Main Container for the whole page */
+.Home
+{ position: absolute;
+    top: 20px;   /* Adjust the distance from the top */
+    left: 20px;  /* Adjust the distance from the left */
+    width: 40px; /* Icon width */
+    height: 40px; /* Icon height */
+    
+}
+.game-container {
+    position: relative; /* Important for absolute positioning of the icon */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+    width:100%;
+    background: linear-gradient(135deg, #6C63FF, #B393FF);
+    padding: 20px;
+  }
+  
+  /* Title style */
+  .title {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  
+  /* Grid layout for game modes */
+  .modes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Individual card style */
+  .mode-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .mode-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Icon and text alignment */
+  .icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .mode-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .mode-card p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Different color themes for each mode */
+  .challenge {
+    background: linear-gradient(135deg, #FF9A8B, #FF6A88);
+  }
+  
+  .tournament {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+  }
+  
+  .duel {
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+  }
+  
+  .lucky {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  }
+  

@@ -1,0 +1,144 @@
+/* App.css */
+/*.app {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #202020;
+    color: white;
+    padding: 20px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .stats-card {
+    background-color: hsl(0, 72%, 48%);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .activity-chart, .course-progress, .calendar {
+    margin-top: 20px;
+  }
+  
+  .course-progress progress {
+    width: 100%;
+  }
+  
+  .calendar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  */
+  /* Container for the entire layout */
+.app {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #202020;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  height: 100vh;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0; /* Sidebar slides in when open */
+}
+
+/* Sidebar content */
+.sidebar h2 {
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li:hover {
+  background-color: #303030;
+}
+
+.sidebar ul li svg {
+  margin-right: 10px;
+}
+
+/* Burger icon */
+.burger-icon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #202020;
+  color: white;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+}
+
+/* Main content area */
+.content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar:not(.open) ~ .content {
+  margin-left: 0; /* Move content back when sidebar is closed */
+}
+
+/* Stats section */
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-card {
+  background-color: hsl(0, 72%, 48%);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.activity-chart, .course-progress, .calendar {
+  margin-top: 20px;
+}
+
+/* Course progress bar */
+.course-progress progress {
+  width: 100%;
+}
+
+/* Calendar section */
+.calendar ul {
+  list-style-type: none;
+  padding: 0;
+}

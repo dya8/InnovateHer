@@ -1,0 +1,66 @@
+/* Main container for result board */
+.result-board-container {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f5;
+  }
+  .Home
+{ position: absolute;
+    top: 20px;   /* Adjust the distance from the top */
+    left: 20px;  /* Adjust the distance from the left */
+    width: 40px; /* Icon width */
+    height: 40px; /* Icon height */
+    
+}
+  
+  /* Result card style */
+  .result-card {
+    background-color: rgb(146, 24, 24);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .result-card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .result-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .result-card p {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .feedback {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Retry button */
+  .retry-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .retry-btn:hover {
+    background-color: #4a47ce;
+  }
+  
